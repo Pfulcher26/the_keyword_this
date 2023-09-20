@@ -51,11 +51,12 @@ class Animal{
         }, 1000);
     }
 
-       //this approach will work  
+    //this approach will work  
     delayedIntroductionArrow() {
         setTimeout(() => console.log(`I am ${this.name} and the sound I make is ${this.sound}`), 1000);
     }
 
+    //always want to be safe?  Write everything as an arrow function
     delayedIntroductionDoubleArrow = () => setTimeout(() => console.log(`I am ${this.name} and the sound I make is ${this.sound}`), 1000);
 }
 
@@ -66,10 +67,12 @@ classyDog.delayedIntroductionDoubleArrow();
 
 
 
+//arrow functions can only be called after they are defined
 globallyAvailable = () => console.log("call me only after I have been defined")
 
 globallyAvailable()
 
+//arow vs function expression 
 array.map(x => x * x)
 
 array.map(function(x){
